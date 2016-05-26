@@ -1,19 +1,30 @@
-<!DOCTYPE html >
+    <!DOCTYPE html >
 <html>
+	<title>Велосипеди:спорт - це сила!</title>
     <meta charset="UTF-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"></link>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-yellow.css"></link>
+	<link rel="stylesheet" href="validation.css"></link>
+	
     <body>
         <header class="w3-container w3-card-4 w3-theme">
-            <h1>Веломагазин</h1>
+            <h1>Веломагазин. Виконав Ігор Пивоварник</h1>
         </header>
         
+		<span id="registration"></span>
+        <button id="login" class="w3-btn w3-theme-l3">Увійти</button>
+        <button id="signout" class="w3-btn w3-theme-l3">Вийти</button>
+        <button id="checksession" class="w3-btn w3-theme-l3">Перевірити сесію</button>
+        <button id="checkcookiebutton" class="w3-btn w3-theme-l3">Перевірити Cookie</button>
+        
+        <p id="log"><p>
+		
         <div class="w3-container" id="itemcontainer">
         </div>
         
 		<footer class="w3-container w3-theme">
-            <span id="totalprice">Сумарна ціна = </span> <button id="buybutton" class="w3-btn w3-theme-l3">Купити</button>
+            <span id="totalprice">Загальна ціна = </span> <button id="buybutton" class="w3-btn w3-theme-l3">Купити</button>
             <p class="input verify:error">This page contains icons made by Freepik from
             <a href="http://www.flaticon.com">www.flaticon.com</a> </p>
         </footer>
@@ -24,12 +35,66 @@
                 <div class="w3-container">
                     <span onclick="document.getElementById('buydialog').style.display='none'"
                         class="w3-closebtn">&times;</span>
-                    <p>Дякуємо!</p>
-                    <p>Разом: <span id="dialogprice"></span> USD.</p>
+                    <p>Дякую!</p>
+                    <p>Сумарно: <span id="dialogprice"></span> USD.</p>
                 </div>
             </div>
         </div>
         
+		<!-- The Modal Dialog for authorization -->
+        <div id="logindialog" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('logindialog').style.display='none'"
+                        class="w3-closebtn">&times;</span>
+                    <p>Будь ласка введіть ваші дані</p>
+                    
+                    <label class="w3-label">Email</label>
+                    <input class="w3-input" type="email" id="log_email" required>
+                     
+                    <label class="w3-label">Пароль</label>
+                    <input class="w3-input" type="password" id="log_pass" required>
+                    
+                    <p><button id="loginbutton" class="w3-btn w3-theme-l3">Логін</button>
+                    
+                    <p>Ще не зареєстровані?
+                    <button id="showregisterdialog" class="w3-btn w3-theme-l3">Зареєструватись</button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal Dialog for registration -->
+        <div id="registerdialog" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('registerdialog').style.display='none'"
+                        class="w3-closebtn">&times;</span>
+                    
+                    <p>Будь ласка введіть необхідну інформацію для реєстрації:</p>
+                    
+                    <label class="w3-label">Ім'я</label>
+                    <input class="w3-input" type="text" id="reg_first" required>
+    
+                    <label class="w3-label">Прізвище</label>
+                    <input class="w3-input" type="text" id="reg_last" required>
+                        
+                    <label class="w3-label">Email</label>
+                    <input class="w3-input" type="email" id="reg_email" required>
+                     
+                    <label class="w3-label">Пароль</label>
+                    <input class="w3-input" type="password" id="reg_pass" required>
+                     
+                    <label class="w3-label">Повторіть пароль</label>
+                    <input class="w3-input" type="password" id="reg_verpass" required>
+                        
+                    <p><button id="register" class="w3-btn w3-theme-l3">Зареєструватись</button>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+		
         <script src="shop-step3.js"></script>
     </body>
 </html>
