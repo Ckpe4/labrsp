@@ -69,8 +69,5 @@
 
         </div>
 
-        <footer>Innovative mobile store. (c) 2016 Yaroslav Kuchkovsky.
-        </footer>
-
     </body>
 </html>
